@@ -356,6 +356,7 @@ header {
 }
 
 /* === Works === */
+/* === Works === */
 #works {
   padding-top: 10em;
   position: relative;
@@ -374,6 +375,7 @@ header {
   transform: translateX(-60%);
   z-index: -1;
 }
+
 .works__dec:nth-child(2) {
   position: absolute;
   top: initial;
@@ -384,16 +386,15 @@ header {
   z-index: -1;
 }
 
+.works__img {
+  display: flex;
+  justify-content: space-between;  /* Căn đều các phần tử */
+  flex-wrap: wrap;  /* Cho phép các phần tử xếp xuống dòng nếu không đủ không gian */
+}
+
 .works__img--single {
-  margin: 2em 0;
-}
-
-.works__img--single:nth-child(odd) {
-  padding-top: 5em;
-}
-
-.works__img--single:nth-child(3) {
-  margin-top: -5em;
+  margin: 2em;
+  width: 30%; /* Thay đổi chiều rộng để các phần tử có thể nằm ngang */
 }
 
 .works__btn {
@@ -409,6 +410,11 @@ header {
   #works h2 {
     margin-bottom: 3em;
   }
+  .works__img--single {
+    width: 30%; /* Điều chỉnh lại chiều rộng cho các phần tử */
+  }
+}
+
   .works__img {
     display: flex;
     flex-wrap: wrap;
