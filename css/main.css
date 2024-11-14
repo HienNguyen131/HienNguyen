@@ -355,7 +355,7 @@ header {
   }
 }
 
-/* === Works === */
+
 /* === Works === */
 #works {
   padding-top: 10em;
@@ -385,16 +385,20 @@ header {
   transform: translateX(60%);
   z-index: -1;
 }
-
 .works__img {
   display: flex;
-  justify-content: space-between;  /* Căn đều các phần tử */
-  flex-wrap: wrap;  /* Cho phép các phần tử xếp xuống dòng nếu không đủ không gian */
+  flex-wrap: wrap; /* Allows items to wrap if they don't fit */
+  justify-content: center; /* Center-aligns images */
 }
-
 .works__img--single {
-  margin: 2em;
-  width: 30%; /* Thay đổi chiều rộng để các phần tử có thể nằm ngang */
+  margin: 1em; /* Adds space between images */
+  width: 30%; /* Adjust width to fit more images horizontally */
+}
+.works__img--single img {
+  border: 2px solid black; /* Adds a black border around each image */
+  border-radius: 5px; /* Optional: rounds the corners slightly */
+  width: 100%; /* Ensures images fit within their container */
+  height: auto;
 }
 
 .works__btn {
@@ -407,11 +411,8 @@ header {
 }
 
 @media (min-width: 62em) {
-  #works h2 {
-    margin-bottom: 3em;
-  }
   .works__img--single {
-    width: 30%; /* Điều chỉnh lại chiều rộng cho các phần tử */
+    width: 30%; /* Keeps consistent width on larger screens */
   }
 }
 
@@ -427,7 +428,7 @@ header {
   .works__img--single:nth-child(3) {
     margin-top: 0;
   }
-}
+
 
 /* === Footer === */
 #footer {
